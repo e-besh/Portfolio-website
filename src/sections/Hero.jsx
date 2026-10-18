@@ -1,0 +1,190 @@
+import { ArrowRight, ChevronDown, Download } from "lucide-react";
+import { Button } from "../components/Button";
+import AnimatedBorderButton from "../components/AnimatedBorderButton";
+import { SiGithub } from "@icons-pack/react-simple-icons";
+import { FaLinkedin } from "react-icons/fa";
+
+const skills = [
+  "React",
+  "Node.js",
+  "MySQL",
+  "Tailwind css",
+  "Java Script",
+  "Html",
+  "Css",
+  "Express",
+  "REST API",
+  "Git",
+  "GitHub Actions",
+  "Vercel",
+];
+const Hero = () => {
+  return (
+    <section className="relative min-h-screen flex items-center overflow-hidden">
+      {/* Bg image */}
+      <div className="absolute inset-0">
+        <img
+          src="/hero-bg.jpg"
+          alt="Hero image"
+          className="w-full h-full object-cover opacity-40"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-background/20 via-background/80 to-background"></div>
+      </div>
+
+      {/* Green Dots */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        {[...Array(30)].map((_, i) => (
+          <div
+            key={i}
+            className="absolute w-1.5 h-1.5 rounded-full opacity-60"
+            style={{
+              backgroundColor: "#20B2A6",
+              left: `${Math.random() * 100}%`,
+              top: `${Math.random() * 100}%`,
+              animation: `slow-drift ${15 + Math.random() * 20}s ease-in-out infinite`,
+              animationDelay: `${Math.random() * 5}s`,
+            }}
+          />
+        ))}
+      </div>
+
+      {/* Content */}
+      <div className="container mx-auto px-6 pt-32 pb-20 relative z-10">
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
+          {/* left section */}
+          <div className="space-y-8">
+            <div className="animate-fade-in">
+              <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass text-sm text-primary">
+                <span className="w-2 h-2 bg-primary rounded-full animate-pulse" />
+                FULL-STACK DEVELOPER AND DATA ANALYST
+              </span>
+            </div>
+
+            {/* Headline  */}
+            <div className="space-y-4">
+              <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight animate-fade-in">
+                Building{" "}
+                <span className="text-primary glow-text animation-delay-100">
+                  websites
+                </span>
+                <br />
+                that solve real
+                <br />
+                <span className="font-serif italic font-normal text-white">
+                  problems
+                </span>
+              </h1>
+
+              {/* Description */}
+              <p className="text-lg text-muted-foreground max-w-lg animate-fade-in animation-delay-200">
+                hello,I’m Enas Beshir, a Full-Stack Developer with a background
+                in Information Systems and Business Management. I build
+                responsive web applications and explore AI-powered solutions to
+                turn ideas into practical, user-focused digital experiences.
+              </p>
+            </div>
+
+            {/* Call to action */}
+            <div className="flex flex-wrap gap-4 animate-fade-in animation-delay-300">
+              <a href="#contact">
+                <Button size="lg">
+                  Contact Me <ArrowRight className="w-5 h-5" />
+                </Button>
+              </a>
+              <a
+                href="/cv/Enas Beshir-cv.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <AnimatedBorderButton>
+                  <Download className="w-5 h-5" />
+                  View CV
+                </AnimatedBorderButton>
+              </a>
+            </div>
+
+            {/* Social Links */}
+            <div className="flex items-center gap-4 animate-fade-in animation-delay-400 ">
+              <span className="text-sm text-muted-foreground">Follow me:</span>
+              {[
+                {
+                  icon: SiGithub,
+                  href: "https://github.com/e-besh",
+                },
+                {
+                  icon: FaLinkedin,
+                  href: "https://linkedin.com/in/enas-beshir-a98084335",
+                },
+              ].map((social, idk) => (
+                <a
+                  key={idk}
+                  href={social.href}
+                  className="p-2 rounded-full glass hover:bg-primary/10 hover:text-primary transition-all duration-300"
+                >
+                  {<social.icon className="w-5 h-5" />}
+                </a>
+              ))}
+            </div>
+          </div>
+
+          {/* right column */}
+          <div className="relative animate-fade-in animation-delay-300 ">
+            {/* profile Image */}
+            <div className="relative max-w-md mx-auto">
+              <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-primary/30 via-transparent to-primary/10 blur-2xl animate-pluse"></div>
+              <div className="relative glass rounded-3xl p-2 glow-border">
+                <img
+                  src="/profile-2.jpg"
+                  alt="Enas Beshir"
+                  className="w-full aspect-[4/5] object-cover rounded-2xl"
+                />
+
+                {/* floating Badge */}
+                <div className="absolute -bottom-4 -right-4 glass rounded-xl px-4 py-3 animate-float">
+                  <div className="flex items-center gap-3">
+                    <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse" />
+                    <span className="text-sm font-medium">
+                      Available for work
+                    </span>
+                  </div>
+                </div>
+                {/* Status Badge */}
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Skills  */}
+        <div className="mt-20 animate-fade-in animation-delay-600">
+          <p className="text-sm text-muted-foreground mb-6 text-center">
+            Technologies I work with
+          </p>
+          <div className="relative overflow-hidden">
+            <div className="flex animate-marquee">
+              {[...skills, ...skills].map((skill, idk) => (
+                <div key={idk} className="flex-shrink-0 px-8 py-4 ">
+                  <span className="text-xl font-semibold text-muted-foreground/50 hover:text-muted-foreground transition-colors">
+                    {skill}
+                  </span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Scroll */}
+      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-fade-in animation-delay-800">
+        <a
+          href="#about"
+          className={`flex flex-col items-center gap-2 text-muted-foreground hover:text-primary transition-colors duration-300`}
+        >
+          <span className="text-xs uppercase tracking-wider">Scroll</span>
+          <ChevronDown className="w-6 h-6 animate-bounce" />
+        </a>
+      </div>
+    </section>
+  );
+};
+
+export default Hero;
