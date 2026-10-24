@@ -65,16 +65,16 @@ const Hero = () => {
               <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight animate-fade-in">
                 {/* Line 1 */}
                 <span className="block whitespace-nowrap">
-                  Building{" "}
+                  Web{" "}
                   <span className="text-primary glow-text animation-delay-100">
-                    Websites
+                    Developer
                   </span>
                 </span>
                 {/* Line 2 */}
                 <span className="block mt-2">
-                  solve{" "}
+                 
                   <span className="font-serif italic font-normal text-white">
-                    problems
+                  
                   </span>
                 </span>
                 
