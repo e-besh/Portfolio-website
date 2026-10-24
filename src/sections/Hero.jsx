@@ -5,13 +5,14 @@ import { SiGithub } from "@icons-pack/react-simple-icons";
 import { FaLinkedin } from "react-icons/fa";
 
 const skills = [
-  "React",
+  
+   "Html",
+   "Java Script",
+   "Css",
+   "Tailwind css",
+   "React",
   "Node.js",
   "MySQL",
-  "Tailwind css",
-  "Java Script",
-  "Html",
-  "Css",
   "Express",
   "REST API",
   "Git",

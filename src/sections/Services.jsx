@@ -11,7 +11,7 @@ const services = [
     icon: Database,
     title: "Backend Development",
     description:
-      "I build robust server-side architectures and RESTful APIs. Whether it's managing databases, handling authentication, or integrating AI models and third-party services, I ensure your application's engine runs smoothly and securely.",
+      "I build robust server-side architectures and RESTful APIs. Whether it's managing databases, handling authentication, or integrating AI models and third-party services, I ensure your application's engine runs smoothly and securely using Node.js,mySQL,Express,REST API",
   },
   {
     icon: Megaphone,
