@@ -49,30 +49,35 @@ const Hero = () => {
       </div>
 
       {/* Content */}
-      <div className="container mx-auto px-6 pt-32 pb-20 relative z-10">
+      <div className="container mx-auto px-6 pt-24 pb-12 relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* left section */}
           <div className="space-y-8">
             <div className="animate-fade-in">
               <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass text-sm text-primary">
                 <span className="w-2 h-2 bg-primary rounded-full animate-pulse" />
-                FULL-STACK DEVELOPER AND DATA ANALYST
+                Full-Stack Developer & Digital Marketer
               </span>
             </div>
 
             {/* Headline  */}
             <div className="space-y-4">
               <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight animate-fade-in">
-                Building{" "}
-                <span className="text-primary glow-text animation-delay-100">
-                  websites
+                {/* Line 1 */}
+                <span className="block whitespace-nowrap">
+                  Building{" "}
+                  <span className="text-primary glow-text animation-delay-100">
+                    Websites
+                  </span>
                 </span>
-                <br />
-                that solve real
-                <br />
-                <span className="font-serif italic font-normal text-white">
-                  problems
+                {/* Line 2 */}
+                <span className="block mt-2">
+                  solve{" "}
+                  <span className="font-serif italic font-normal text-white">
+                    problems
+                  </span>
                 </span>
+                
               </h1>
 
               {/* Description */}
@@ -130,7 +135,7 @@ const Hero = () => {
           {/* right column */}
           <div className="relative animate-fade-in animation-delay-300 ">
             {/* profile Image */}
-            <div className="relative max-w-md mx-auto">
+            <div className="relative max-w-[340px] lg:max-w-[380px] mx-auto">
               <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-primary/30 via-transparent to-primary/10 blur-2xl animate-pluse"></div>
               <div className="relative glass rounded-3xl p-2 glow-border">
                 <img
